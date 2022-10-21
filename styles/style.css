@@ -6,6 +6,25 @@ body{
     background-color: grey;
 }
 .titulo {
+    margin-top: 20px;
     color: rgb(70, 70, 209);
     text-align: center;
+}
+p{
+    text-align: center;
+    color: rgb(247, 169, 67);
+}
+.centrarboton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.boton{
+    color: rgb(231, 83, 25);
+    background-color: rgb(231, 159, 25);
+
+}
+.boton:hover{
+    color: aliceblue;
 }
