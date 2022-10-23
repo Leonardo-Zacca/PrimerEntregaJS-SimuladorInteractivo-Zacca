@@ -4,44 +4,46 @@ alert('¡Bienvenido a FiLa3D! Ingrese el número de alguna de las siguientes Imp
 let stock;
 let impresora;
 let costo;
-let valor = prompt('1-AnetET4   $50000\n2-Creality3D   $60000\n3-Artillery Sidewinder X1   $75000\n4-Hellbot Magna 2   $45000\n5-Creality Ender 6   $77000');
-switch (valor) {
-    case '1':
-        alert('Usted eligió una impresora AnetET4');
-        impresora = ('AnetET4');
-        stock = prompt('¿Cuantos equipos desea comprar?');
-        costo = 50000 * stock;
-        break;
-    case '2':
-        alert('Usted eligió una impresora Creality3D');
-        impresora = ('Creality3D');
-        stock = prompt('¿Cuantos equipos desea comprar?');
-        costo = 60000 * stock;
-        break;
-    case '3':
-        alert('Usted eligió una impresora Artillery Sidewinder X1');
-        impresora = ('Artillery Sidewinder X1');
-        stock = prompt('¿Cuantos equipos desea comprar?');
-        costo = 75000 * stock;
-        break;
-    case '4':
-        alert('Usted eligió una impresora Hellbot Magna 2');
-        impresora = ('Hellbot Magna 2');
-        stock = prompt('¿Cuantos equipos desea comprar?');
-        costo = 45000 * stock;
-        break;
-    case '5':
-        alert('Usted eligió una impresora Creality Ender 6');
-        impresora = ('Creality Ender 6');
-        stock = prompt('¿Cuantos equipos desea comprar?');
-        costo = 77000 * stock;
-        break;
-    default:
-        alert('Usted ha ingresado un valor incorrecto');
-        break;
-}
-function compra(impresora,stock){
+let valor;
+do {
+    valor = prompt('1-AnetET4   $50000\n2-Creality3D   $60000\n3-Artillery Sidewinder X1   $75000\n4-Hellbot Magna 2   $45000\n5-Creality Ender 6   $77000');
+    switch (valor) {
+        case '1':
+            alert('Usted eligió una impresora AnetET4');
+            impresora = ('AnetET4');
+            stock = prompt('¿Cuantos equipos desea comprar?');
+            costo = 50000 * stock;
+            break;
+        case '2':
+            alert('Usted eligió una impresora Creality3D');
+            impresora = ('Creality3D');
+            stock = prompt('¿Cuantos equipos desea comprar?');
+            costo = 60000 * stock;
+            break;
+        case '3':
+            alert('Usted eligió una impresora Artillery Sidewinder X1');
+            impresora = ('Artillery Sidewinder X1');
+            stock = prompt('¿Cuantos equipos desea comprar?');
+            costo = 75000 * stock;
+            break;
+        case '4':
+            alert('Usted eligió una impresora Hellbot Magna 2');
+            impresora = ('Hellbot Magna 2');
+            stock = prompt('¿Cuantos equipos desea comprar?');
+            costo = 45000 * stock;
+            break;
+        case '5':
+            alert('Usted eligió una impresora Creality Ender 6');
+            impresora = ('Creality Ender 6');
+            stock = prompt('¿Cuantos equipos desea comprar?');
+            costo = 77000 * stock;
+            break;
+        default:
+            alert('Usted ha ingresado un valor incorrecto, por favor seleccione una opción');
+            break;
+    }
+} while (valor == false || valor>5 || valor<1);
+function compra(impresora, stock) {
     alert('Usted compró ' + stock + ' unidad/es de la impresora ' + impresora + ' con un costo de $' + costo + ' Pesos')
 }
-compra(impresora,stock);
-
+compra(impresora, stock);
